@@ -94,6 +94,13 @@
   50% { transform: translateY(-4px); }
 }
 
+@keyframes bounce-once {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-3px); }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -123,6 +130,10 @@
 
 .animate-bounce-subtle {
   animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-bounce-once {
+  animation: bounce-once 0.5s ease-out forwards;
 }
 
 /* Stagger delays for grid items */
