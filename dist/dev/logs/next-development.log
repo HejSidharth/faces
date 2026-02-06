@@ -294,3 +294,6 @@ Import traces:
     ./projects/typescript/faces/faces/app/page.tsx [Server Component]
 [10:26:14.430] Browser WARN    Image with src "/icon-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[10:33:13.559] Server  LOG     ✓ Compiled in 95ms
+[10:51:29.538] Server  LOG     ✓ Compiled in 97ms
+[10:52:40.810] Server  LOG     ✓ Compiled in 53ms

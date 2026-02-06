@@ -240,16 +240,30 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+const MIN_FACE_COUNT = 1;
+const DEFAULT_FACE_COUNT = 5;
+function clampFaceCount(value) {
+    return Math.max(MIN_FACE_COUNT, Math.min(value, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length));
+}
 function LinkGenerator() {
     _s();
-    const [count, setCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(5);
+    const [countInput, setCountInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(String(DEFAULT_FACE_COUNT));
     const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$ui$2f$toast$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
+    const parsedCount = Number.parseInt(countInput, 10);
+    const count = Number.isNaN(parsedCount) ? MIN_FACE_COUNT : clampFaceCount(parsedCount);
     const generateLinks = ()=>{
         // Shuffle and pick N random URLs
         const shuffled = [
             ...__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"]
         ].sort(()=>Math.random() - 0.5);
         return shuffled.slice(0, Math.min(count, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length));
+    };
+    const handleCountChange = (value)=>{
+        const digitsOnly = value.replace(/\D/g, "");
+        setCountInput(digitsOnly);
+    };
+    const handleCountBlur = ()=>{
+        setCountInput(String(count));
     };
     const handleGenerateAndCopy = ()=>{
         const urls = generateLinks();
@@ -274,22 +288,20 @@ function LinkGenerator() {
                                 children: "How many faces?"
                             }, void 0, false, {
                                 fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                                lineNumber: 31,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                type: "number",
-                                min: "1",
-                                max: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length,
-                                value: count,
-                                onChange: (e)=>{
-                                    const val = parseInt(e.target.value) || 1;
-                                    setCount(Math.max(1, Math.min(val, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length)));
-                                },
+                                type: "text",
+                                inputMode: "numeric",
+                                pattern: "[0-9]*",
+                                value: countInput,
+                                onChange: (e)=>handleCountChange(e.target.value),
+                                onBlur: handleCountBlur,
                                 className: "flex-1 px-4 py-2 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
                             }, void 0, false, {
                                 fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                                lineNumber: 34,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -301,13 +313,13 @@ function LinkGenerator() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                                lineNumber: 45,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                        lineNumber: 30,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -316,27 +328,27 @@ function LinkGenerator() {
                         children: "Generate & Copy"
                     }, void 0, false, {
                         fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                        lineNumber: 50,
+                        lineNumber: 69,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-                lineNumber: 29,
+                lineNumber: 50,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-            lineNumber: 28,
+            lineNumber: 49,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/projects/typescript/faces/faces/components/link-generator.tsx",
-        lineNumber: 27,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 }
-_s(LinkGenerator, "g3ecagKJ5zFAj69Ngd9LyrOwUWQ=", false, function() {
+_s(LinkGenerator, "ebPTCgd0ahxdA2fpeuaZDFJQQEE=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$ui$2f$toast$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"]
     ];
@@ -1018,6 +1030,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$fa
 var __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$use$2d$image$2d$preloader$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/projects/typescript/faces/faces/lib/use-image-preloader.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$loading$2d$screen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/projects/typescript/faces/faces/components/loading-screen.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$ui$2f$toast$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/projects/typescript/faces/faces/components/ui/toast.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 "use client";
@@ -1026,21 +1039,29 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 ;
+;
 // Memoized FaceCard component to prevent unnecessary re-renders
-const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["memo"])(_s(function FaceCard({ imageUrl, copyUrl, index, isCopied, onCopy, isPriority }) {
+const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["memo"])(_s(function FaceCard({ imageUrl, copyUrl, index, isSelectMode, isSelected, isCopied, onCopy, onToggleSelect, isPriority }) {
     _s();
     const handleClick = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "FaceCard.FaceCard.useCallback[handleClick]": ()=>{
+            if (isSelectMode) {
+                onToggleSelect(copyUrl);
+                return;
+            }
             onCopy(copyUrl);
         }
     }["FaceCard.FaceCard.useCallback[handleClick]"], [
         copyUrl,
-        onCopy
+        isSelectMode,
+        onCopy,
+        onToggleSelect
     ]);
     const shouldPrioritizeFetch = index < 2;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         onClick: handleClick,
-        className: "face-card group relative aspect-square rounded-2xl bg-white border border-white/20 overflow-hidden cursor-pointer shadow-lg hover:shadow-xl",
+        "aria-pressed": isSelectMode ? isSelected : undefined,
+        className: `face-card group relative aspect-square rounded-2xl bg-white border border-white/20 overflow-hidden cursor-pointer shadow-lg hover:shadow-xl ${isSelected ? "ring-2 ring-accent ring-offset-2 ring-offset-background" : ""}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 src: imageUrl,
@@ -1054,12 +1075,12 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                 priority: shouldPrioritizeFetch
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 42,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center",
-                children: isCopied ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                className: `absolute inset-0 bg-black/60 transition-opacity duration-200 flex items-center justify-center ${isSelectMode || isCopied ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`,
+                children: isSelectMode ? isSelected ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     className: "w-6 h-6 text-accent",
                     fill: "none",
                     viewBox: "0 0 24 24",
@@ -1071,12 +1092,50 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         d: "M5 13l4 4L19 7"
                     }, void 0, false, {
                         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                        lineNumber: 64,
+                        lineNumber: 84,
+                        columnNumber: 15
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                    lineNumber: 77,
+                    columnNumber: 13
+                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                    className: "w-6 h-6 text-white",
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    stroke: "currentColor",
+                    strokeWidth: 2,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        d: "M12 4v16m8-8H4"
+                    }, void 0, false, {
+                        fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                        lineNumber: 98,
+                        columnNumber: 15
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                    lineNumber: 91,
+                    columnNumber: 13
+                }, this) : isCopied ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                    className: "w-6 h-6 text-accent",
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    stroke: "currentColor",
+                    strokeWidth: 2,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        d: "M5 13l4 4L19 7"
+                    }, void 0, false, {
+                        fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                        lineNumber: 109,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 57,
+                    lineNumber: 102,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     className: "w-5 h-5 text-white",
@@ -1090,38 +1149,46 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         d: "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                     }, void 0, false, {
                         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                        lineNumber: 78,
+                        lineNumber: 123,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 71,
+                    lineNumber: 116,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 55,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-        lineNumber: 38,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }, "PRIOWs9bezaAbp8UlGmbaZMoYYA="), (prevProps, nextProps)=>{
     // Custom comparison to only re-render when this specific card state changes.
-    return prevProps.imageUrl === nextProps.imageUrl && prevProps.copyUrl === nextProps.copyUrl && prevProps.isCopied === nextProps.isCopied && prevProps.index === nextProps.index && prevProps.isPriority === nextProps.isPriority;
+    return prevProps.imageUrl === nextProps.imageUrl && prevProps.copyUrl === nextProps.copyUrl && prevProps.isSelectMode === nextProps.isSelectMode && prevProps.isSelected === nextProps.isSelected && prevProps.isCopied === nextProps.isCopied && prevProps.index === nextProps.index && prevProps.isPriority === nextProps.isPriority;
 });
 _c = FaceCard;
 function FaceGallery() {
     _s1();
     const [copiedUrl, setCopiedUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isSelectMode, setIsSelectMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [selectedCopyUrls, setSelectedCopyUrls] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const copyResetTimeoutRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const { toast } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$ui$2f$toast$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"])();
     const { progress, loadedCount, totalCount, priorityLoaded } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$use$2d$image$2d$preloader$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useImagePreloader"])({
         imageUrls: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"],
         priorityCount: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PRIORITY_FACE_COUNT"]
     });
+    const selectedCopyUrlSet = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "FaceGallery.useMemo[selectedCopyUrlSet]": ()=>new Set(selectedCopyUrls)
+    }["FaceGallery.useMemo[selectedCopyUrlSet]"], [
+        selectedCopyUrls
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "FaceGallery.useEffect": ()=>{
             return ({
@@ -1137,6 +1204,10 @@ function FaceGallery() {
         "FaceGallery.useCallback[handleCopy]": (url)=>{
             navigator.clipboard.writeText(url);
             setCopiedUrl(url);
+            toast({
+                title: "Copied face URL",
+                duration: 2000
+            });
             if (copyResetTimeoutRef.current !== null) {
                 window.clearTimeout(copyResetTimeoutRef.current);
             }
@@ -1146,7 +1217,59 @@ function FaceGallery() {
                 }
             }["FaceGallery.useCallback[handleCopy]"], 2000);
         }
-    }["FaceGallery.useCallback[handleCopy]"], []);
+    }["FaceGallery.useCallback[handleCopy]"], [
+        toast
+    ]);
+    const handleToggleSelectMode = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "FaceGallery.useCallback[handleToggleSelectMode]": ()=>{
+            setCopiedUrl(null);
+            setIsSelectMode({
+                "FaceGallery.useCallback[handleToggleSelectMode]": (prev)=>{
+                    const next = !prev;
+                    if (!next) {
+                        setSelectedCopyUrls([]);
+                    }
+                    return next;
+                }
+            }["FaceGallery.useCallback[handleToggleSelectMode]"]);
+        }
+    }["FaceGallery.useCallback[handleToggleSelectMode]"], []);
+    const handleToggleSelected = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "FaceGallery.useCallback[handleToggleSelected]": (url)=>{
+            setSelectedCopyUrls({
+                "FaceGallery.useCallback[handleToggleSelected]": (prev)=>prev.includes(url) ? prev.filter({
+                        "FaceGallery.useCallback[handleToggleSelected]": (item)=>item !== url
+                    }["FaceGallery.useCallback[handleToggleSelected]"]) : [
+                        ...prev,
+                        url
+                    ]
+            }["FaceGallery.useCallback[handleToggleSelected]"]);
+        }
+    }["FaceGallery.useCallback[handleToggleSelected]"], []);
+    const handleClearSelection = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "FaceGallery.useCallback[handleClearSelection]": ()=>{
+            setSelectedCopyUrls([]);
+        }
+    }["FaceGallery.useCallback[handleClearSelection]"], []);
+    const handleCopySelected = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "FaceGallery.useCallback[handleCopySelected]": ()=>{
+            if (selectedCopyUrls.length === 0) {
+                return;
+            }
+            const orderedSelectedUrls = __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].filter({
+                "FaceGallery.useCallback[handleCopySelected].orderedSelectedUrls": (url)=>selectedCopyUrlSet.has(url)
+            }["FaceGallery.useCallback[handleCopySelected].orderedSelectedUrls"]);
+            const jsonArray = JSON.stringify(orderedSelectedUrls, null, 2);
+            navigator.clipboard.writeText(jsonArray);
+            toast({
+                title: `Copied ${orderedSelectedUrls.length} selected face${orderedSelectedUrls.length !== 1 ? "s" : ""}`
+            });
+        }
+    }["FaceGallery.useCallback[handleCopySelected]"], [
+        selectedCopyUrlSet,
+        selectedCopyUrls.length,
+        toast
+    ]);
     const showGallery = priorityLoaded;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -1157,7 +1280,7 @@ function FaceGallery() {
                 totalCount: totalCount
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 136,
+                lineNumber: 231,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1174,21 +1297,67 @@ function FaceGallery() {
                                     children: "Face Directory"
                                 }, void 0, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 248,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-muted-foreground max-w-md mx-auto",
-                                    children: "Browse through our collection of Notion-style avatar faces. Click any face to copy its URL."
+                                    children: "Browse through our collection of Notion-style avatar faces. Click any face to copy its URL, or use Select mode for multi-select."
                                 }, void 0, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 251,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-6 flex flex-wrap items-center justify-center gap-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: handleToggleSelectMode,
+                                            className: "px-4 py-2 text-sm font-medium rounded-lg border border-border bg-background/70 hover:bg-muted transition-colors",
+                                            children: isSelectMode ? "Done" : "Select"
+                                        }, void 0, false, {
+                                            fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                                            lineNumber: 256,
+                                            columnNumber: 15
+                                        }, this),
+                                        isSelectMode ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: handleCopySelected,
+                                                    disabled: selectedCopyUrls.length === 0,
+                                                    className: "px-4 py-2 text-sm font-medium rounded-lg bg-accent text-accent-foreground hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                                                    children: [
+                                                        "Copy Selected (",
+                                                        selectedCopyUrls.length,
+                                                        ")"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                                                    lineNumber: 264,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: handleClearSelection,
+                                                    disabled: selectedCopyUrls.length === 0,
+                                                    className: "px-4 py-2 text-sm font-medium rounded-lg border border-border bg-background/70 hover:bg-muted disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                                                    children: "Clear"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                                                    lineNumber: 271,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true) : null
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
+                                    lineNumber: 255,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                            lineNumber: 152,
+                            lineNumber: 247,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1197,35 +1366,39 @@ function FaceGallery() {
                                     imageUrl: imageUrl,
                                     copyUrl: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index],
                                     index: index,
-                                    isCopied: copiedUrl === __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index],
+                                    isSelectMode: isSelectMode,
+                                    isSelected: selectedCopyUrlSet.has(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index]),
+                                    isCopied: !isSelectMode && copiedUrl === __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index],
                                     onCopy: handleCopy,
+                                    onToggleSelect: handleToggleSelected,
                                     isPriority: index < __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PRIORITY_FACE_COUNT"]
                                 }, imageUrl, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 165,
+                                    lineNumber: 286,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                            lineNumber: 163,
+                            lineNumber: 284,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 150,
+                    lineNumber: 245,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 144,
+                lineNumber: 239,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s1(FaceGallery, "NMEV79Vn/WxQ3Pmt7TiQu10kTfo=", false, function() {
+_s1(FaceGallery, "mvtwkMLSf8uJyu0Jj74tKdt/zVA=", false, function() {
     return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$components$2f$ui$2f$toast$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useToast"],
         __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$use$2d$image$2d$preloader$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useImagePreloader"]
     ];
 });

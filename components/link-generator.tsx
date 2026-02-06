@@ -4,14 +4,35 @@ import { useState } from "react";
 import { APPWRITE_FACE_URLS } from "@/lib/face-urls";
 import { useToast } from "@/components/ui/toast";
 
+const MIN_FACE_COUNT = 1;
+const DEFAULT_FACE_COUNT = 5;
+
+function clampFaceCount(value: number) {
+  return Math.max(MIN_FACE_COUNT, Math.min(value, APPWRITE_FACE_URLS.length));
+}
+
 export function LinkGenerator() {
-  const [count, setCount] = useState(5);
+  const [countInput, setCountInput] = useState(String(DEFAULT_FACE_COUNT));
   const { toast } = useToast();
+
+  const parsedCount = Number.parseInt(countInput, 10);
+  const count = Number.isNaN(parsedCount)
+    ? MIN_FACE_COUNT
+    : clampFaceCount(parsedCount);
 
   const generateLinks = () => {
     // Shuffle and pick N random URLs
     const shuffled = [...APPWRITE_FACE_URLS].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, Math.min(count, APPWRITE_FACE_URLS.length));
+  };
+
+  const handleCountChange = (value: string) => {
+    const digitsOnly = value.replace(/\D/g, "");
+    setCountInput(digitsOnly);
+  };
+
+  const handleCountBlur = () => {
+    setCountInput(String(count));
   };
 
   const handleGenerateAndCopy = () => {
@@ -32,14 +53,12 @@ export function LinkGenerator() {
               How many faces?
             </label>
             <input
-              type="number"
-              min="1"
-              max={APPWRITE_FACE_URLS.length}
-              value={count}
-              onChange={(e) => {
-                const val = parseInt(e.target.value) || 1;
-                setCount(Math.max(1, Math.min(val, APPWRITE_FACE_URLS.length)));
-              }}
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              value={countInput}
+              onChange={(e) => handleCountChange(e.target.value)}
+              onBlur={handleCountBlur}
               className="flex-1 px-4 py-2 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
             />
             <span className="text-xs text-muted-foreground whitespace-nowrap">
