@@ -9,3 +9,288 @@
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:13:35.377] Browser WARN    Image with src "/icon-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:17:23.273] Server  LOG     ✓ Compiled in 57ms
+[00:17:24.267] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+  3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+  4 | import Image from "next/image";
+> 5 | import { FACE_URLS, PRIORITY_FACE_COUNT } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  7 | import { LoadingScreen } from "@/components/loading-screen";
+  8 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:24.267] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+  3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+  4 | import Image from "next/image";
+> 5 | import { FACE_URLS, PRIORITY_FACE_COUNT } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  7 | import { LoadingScreen } from "@/components/loading-screen";
+  8 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-ssr] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:24.267] Browser ERROR   ./projects/typescript/faces/faces/components/link-generator.tsx:4:1
+Export FACE_URLS doesn't exist in target module
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { FACE_URLS } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useToast } from "@/components/ui/toast";
+  6 |
+  7 | export function LinkGenerator() {
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:24.267] Browser ERROR   ./projects/typescript/faces/faces/components/link-generator.tsx:4:1
+Export FACE_URLS doesn't exist in target module
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { FACE_URLS } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useToast } from "@/components/ui/toast";
+  6 |
+  7 | export function LinkGenerator() {
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-ssr] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:33.886] Server  LOG     ✓ Compiled in 51ms
+[00:17:34.266] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+   3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+   4 | import Image from "next/image";
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   FACE_URLS,
+     | ^^^^^^^^^^^^
+>  7 |   APPWRITE_FACE_URLS,
+     | ^^^^^^^^^^^^
+>  8 |   PRIORITY_FACE_COUNT,
+     | ^^^^^^^^^^^^
+>  9 | } from "@/lib/face-urls";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  11 | import { LoadingScreen } from "@/components/loading-screen";
+  12 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:34.266] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+   3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+   4 | import Image from "next/image";
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   FACE_URLS,
+     | ^^^^^^^^^^^^
+>  7 |   APPWRITE_FACE_URLS,
+     | ^^^^^^^^^^^^
+>  8 |   PRIORITY_FACE_COUNT,
+     | ^^^^^^^^^^^^
+>  9 | } from "@/lib/face-urls";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  11 | import { LoadingScreen } from "@/components/loading-screen";
+  12 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-ssr] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:34.266] Browser ERROR   ./projects/typescript/faces/faces/components/link-generator.tsx:4:1
+Export FACE_URLS doesn't exist in target module
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { FACE_URLS } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useToast } from "@/components/ui/toast";
+  6 |
+  7 | export function LinkGenerator() {
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:34.266] Browser ERROR   ./projects/typescript/faces/faces/components/link-generator.tsx:4:1
+Export FACE_URLS doesn't exist in target module
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { FACE_URLS } from "@/lib/face-urls";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { useToast } from "@/components/ui/toast";
+  6 |
+  7 | export function LinkGenerator() {
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-ssr] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/link-generator.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/components/hero.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:40.558] Server  LOG     ✓ Compiled in 48ms
+[00:17:41.267] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+   3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+   4 | import Image from "next/image";
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   FACE_URLS,
+     | ^^^^^^^^^^^^
+>  7 |   APPWRITE_FACE_URLS,
+     | ^^^^^^^^^^^^
+>  8 |   PRIORITY_FACE_COUNT,
+     | ^^^^^^^^^^^^
+>  9 | } from "@/lib/face-urls";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  11 | import { LoadingScreen } from "@/components/loading-screen";
+  12 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-client] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[00:17:41.268] Browser ERROR   ./projects/typescript/faces/faces/components/face-gallery.tsx:5:1
+Export FACE_URLS doesn't exist in target module
+   3 | import { useState, useCallback, useEffect, useRef, memo } from "react";
+   4 | import Image from "next/image";
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   FACE_URLS,
+     | ^^^^^^^^^^^^
+>  7 |   APPWRITE_FACE_URLS,
+     | ^^^^^^^^^^^^
+>  8 |   PRIORITY_FACE_COUNT,
+     | ^^^^^^^^^^^^
+>  9 | } from "@/lib/face-urls";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { useImagePreloader } from "@/lib/use-image-preloader";
+  11 | import { LoadingScreen } from "@/components/loading-screen";
+  12 |
+
+The export FACE_URLS was not found in module [project]/projects/typescript/faces/faces/lib/face-urls.ts [app-ssr] (ecmascript).
+Did you mean to import TOTAL_FACES?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component Browser]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/typescript/faces/faces/components/face-gallery.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Client Component SSR]
+    ./projects/typescript/faces/faces/app/page.tsx [Server Component]
+[10:26:14.430] Browser WARN    Image with src "/icon-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading

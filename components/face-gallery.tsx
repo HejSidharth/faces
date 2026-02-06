@@ -2,12 +2,17 @@
 
 import { useState, useCallback, useEffect, useRef, memo } from "react";
 import Image from "next/image";
-import { FACE_URLS, PRIORITY_FACE_COUNT } from "@/lib/face-urls";
+import {
+  FACE_URLS,
+  APPWRITE_FACE_URLS,
+  PRIORITY_FACE_COUNT,
+} from "@/lib/face-urls";
 import { useImagePreloader } from "@/lib/use-image-preloader";
 import { LoadingScreen } from "@/components/loading-screen";
 
 interface FaceCardProps {
-  url: string;
+  imageUrl: string;
+  copyUrl: string;
   index: number;
   isCopied: boolean;
   onCopy: (url: string) => void;
@@ -16,15 +21,16 @@ interface FaceCardProps {
 
 // Memoized FaceCard component to prevent unnecessary re-renders
 const FaceCard = memo(function FaceCard({
-  url,
+  imageUrl,
+  copyUrl,
   index,
   isCopied,
   onCopy,
   isPriority,
 }: FaceCardProps) {
   const handleClick = useCallback(() => {
-    onCopy(url);
-  }, [url, onCopy]);
+    onCopy(copyUrl);
+  }, [copyUrl, onCopy]);
 
   const shouldPrioritizeFetch = index < 2;
 
@@ -34,7 +40,7 @@ const FaceCard = memo(function FaceCard({
       className="face-card group relative aspect-square rounded-2xl bg-white border border-white/20 overflow-hidden cursor-pointer shadow-lg hover:shadow-xl"
     >
       <Image
-        src={url}
+        src={imageUrl}
         alt={`Avatar face ${index + 1}`}
         width={120}
         height={120}
@@ -83,7 +89,8 @@ const FaceCard = memo(function FaceCard({
 (prevProps, nextProps) => {
   // Custom comparison to only re-render when this specific card state changes.
   return (
-    prevProps.url === nextProps.url &&
+    prevProps.imageUrl === nextProps.imageUrl &&
+    prevProps.copyUrl === nextProps.copyUrl &&
     prevProps.isCopied === nextProps.isCopied &&
     prevProps.index === nextProps.index &&
     prevProps.isPriority === nextProps.isPriority
@@ -154,12 +161,13 @@ export function FaceGallery() {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4">
-            {FACE_URLS.map((url, index) => (
+            {FACE_URLS.map((imageUrl, index) => (
               <FaceCard
-                key={url}
-                url={url}
+                key={imageUrl}
+                imageUrl={imageUrl}
+                copyUrl={APPWRITE_FACE_URLS[index]}
                 index={index}
-                isCopied={copiedUrl === url}
+                isCopied={copiedUrl === APPWRITE_FACE_URLS[index]}
                 onCopy={handleCopy}
                 isPriority={index < PRIORITY_FACE_COUNT}
               />

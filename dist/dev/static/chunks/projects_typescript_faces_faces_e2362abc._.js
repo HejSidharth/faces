@@ -4,6 +4,8 @@
 
 // Local face image paths (downloaded from Appwrite for better performance)
 __turbopack_context__.s([
+    "APPWRITE_FACE_URLS",
+    ()=>APPWRITE_FACE_URLS,
     "FACE_URLS",
     ()=>FACE_URLS,
     "PRIORITY_FACE_COUNT",
@@ -113,6 +115,108 @@ const FACE_URLS = [
     "/faces/face-099.png",
     "/faces/face-100.png"
 ];
+const APPWRITE_FACE_URLS = [
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88f20012413729ee/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88f40038fe6fa4f1/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88f7001cdd345d10/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88f90023dbb0d05b/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88fa003286ea2d53/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f88fd0021bccc601e/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89020004dac72863/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89030035e685c297/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8907003e45b1c63c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f890b00201b3204a3/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f890d000343bdc5a7/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f890f003d012932f3/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8912002dd105394d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f891500033f616127/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8916001dd7b3c8d4/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8917002f6eb36139/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f891a001d745bc73c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f891e0033281f5c8b/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f891f0032330f3d52/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8920001a2dca7da4/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89220008f45e032d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8924000f6d8f9dde/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8928000fd09b947c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f892d00304f1010a3/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f893000084fc74718/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89320004ca5fa5e7/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89340012d584b7e6/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8936002f5757e8db/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8938000a9a115b6d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f893b00227c6ce60d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f893c00257d020305/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f893d0028d0b98a8a/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f894000379c04dfa7/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f894100313e47a10a/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89420038597a4e14/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89470031cae2d8a0/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f894a002906c49bf0/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f894d001805704e20/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f894e00276a883cf5/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8950003a56c9d309/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8954002dc6a3ac75/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8959003e19ba6657/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f895c00047f89ba5d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8961000a243f50b6/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8964003c2b59a328/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89650014b24a2542/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f896700381a49262a/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f896b000a51852a29/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f896d002fb09a754f/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f896e002231910562/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f896f0002f3ed0b1f/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f897000135b769372/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f897300383476561c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89740033eb6f6540/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89760025ef2f37ef/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8979003bb40092dc/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f897e002caa6fccbf/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f898200317a30feb9/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f898500034c4bd0d8/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f898b0008f1843b46/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f898d002dd75e4635/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f898e0038ca1baa60/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89930010f5916843/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8995003bf2e42f30/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f899600075b6bd81d/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f899a001351eb7c66/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f899b001bdbb3dc93/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f899d002bf29b5d5f/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89a1000324c7081a/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89a3000aed8e4d9c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89a6003ac4e6c741/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89a7003db3f47a39/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89aa002a95338b00/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89ae003300d21eb3/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89b100050e962dd3/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89b3000300cbd552/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89b7001b05860583/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89bb002f82042c79/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89bf0020050a4d48/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89c5000a3eb3b679/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89c60029ac94110b/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89c90003dce02092/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89d00003aab17d0a/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89d200246440f78c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89d3002e8fbedde0/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89d5003a43acb5a6/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89d7002085d273ef/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89dc0022e60d05ad/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89dd00368cc87326/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89df0034a4f64a4e/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89e000059419703c/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89e50009583a8428/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89ea0014f2a497b8/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89ed00030586ba6b/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89f1001c105283e5/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89f4000a23962681/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89f800348a39aeeb/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89fc001b5c80e7e4/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f89fe0021839aba71/view?project=694f86f8000af20e3525",
+    "https://nyc.cloud.appwrite.io/v1/storage/buckets/694f8728000d9f558482/files/694f8a01000074ad1f22/view?project=694f86f8000af20e3525"
+];
 const TOTAL_FACES = 100;
 const PRIORITY_FACE_COUNT = 8;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -143,9 +247,9 @@ function LinkGenerator() {
     const generateLinks = ()=>{
         // Shuffle and pick N random URLs
         const shuffled = [
-            ...__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"]
+            ...__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"]
         ].sort(()=>Math.random() - 0.5);
-        return shuffled.slice(0, Math.min(count, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].length));
+        return shuffled.slice(0, Math.min(count, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length));
     };
     const handleGenerateAndCopy = ()=>{
         const urls = generateLinks();
@@ -176,11 +280,11 @@ function LinkGenerator() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                 type: "number",
                                 min: "1",
-                                max: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].length,
+                                max: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length,
                                 value: count,
                                 onChange: (e)=>{
                                     const val = parseInt(e.target.value) || 1;
-                                    setCount(Math.max(1, Math.min(val, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].length)));
+                                    setCount(Math.max(1, Math.min(val, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length)));
                                 },
                                 className: "flex-1 px-4 py-2 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
                             }, void 0, false, {
@@ -192,7 +296,7 @@ function LinkGenerator() {
                                 className: "text-xs text-muted-foreground whitespace-nowrap",
                                 children: [
                                     "/ ",
-                                    __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].length,
+                                    __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"].length,
                                     " available"
                                 ]
                             }, void 0, true, {
@@ -923,14 +1027,14 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 // Memoized FaceCard component to prevent unnecessary re-renders
-const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["memo"])(_s(function FaceCard({ url, index, isCopied, onCopy, isPriority }) {
+const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["memo"])(_s(function FaceCard({ imageUrl, copyUrl, index, isCopied, onCopy, isPriority }) {
     _s();
     const handleClick = (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "FaceCard.FaceCard.useCallback[handleClick]": ()=>{
-            onCopy(url);
+            onCopy(copyUrl);
         }
     }["FaceCard.FaceCard.useCallback[handleClick]"], [
-        url,
+        copyUrl,
         onCopy
     ]);
     const shouldPrioritizeFetch = index < 2;
@@ -939,7 +1043,7 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
         className: "face-card group relative aspect-square rounded-2xl bg-white border border-white/20 overflow-hidden cursor-pointer shadow-lg hover:shadow-xl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                src: url,
+                src: imageUrl,
                 alt: `Avatar face ${index + 1}`,
                 width: 120,
                 height: 120,
@@ -950,7 +1054,7 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                 priority: shouldPrioritizeFetch
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 36,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -967,12 +1071,12 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         d: "M5 13l4 4L19 7"
                     }, void 0, false, {
                         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                        lineNumber: 58,
+                        lineNumber: 64,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 51,
+                    lineNumber: 57,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     className: "w-5 h-5 text-white",
@@ -986,28 +1090,28 @@ const FaceCard = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         d: "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                     }, void 0, false, {
                         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                        lineNumber: 72,
+                        lineNumber: 78,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 65,
+                    lineNumber: 71,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 49,
+                lineNumber: 55,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-        lineNumber: 32,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
 }, "PRIOWs9bezaAbp8UlGmbaZMoYYA="), (prevProps, nextProps)=>{
     // Custom comparison to only re-render when this specific card state changes.
-    return prevProps.url === nextProps.url && prevProps.isCopied === nextProps.isCopied && prevProps.index === nextProps.index && prevProps.isPriority === nextProps.isPriority;
+    return prevProps.imageUrl === nextProps.imageUrl && prevProps.copyUrl === nextProps.copyUrl && prevProps.isCopied === nextProps.isCopied && prevProps.index === nextProps.index && prevProps.isPriority === nextProps.isPriority;
 });
 _c = FaceCard;
 function FaceGallery() {
@@ -1053,7 +1157,7 @@ function FaceGallery() {
                 totalCount: totalCount
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 129,
+                lineNumber: 136,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1070,7 +1174,7 @@ function FaceGallery() {
                                     children: "Face Directory"
                                 }, void 0, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 153,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1078,42 +1182,43 @@ function FaceGallery() {
                                     children: "Browse through our collection of Notion-style avatar faces. Click any face to copy its URL."
                                 }, void 0, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 156,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                            lineNumber: 145,
+                            lineNumber: 152,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4",
-                            children: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].map((url, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FaceCard, {
-                                    url: url,
+                            children: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FACE_URLS"].map((imageUrl, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FaceCard, {
+                                    imageUrl: imageUrl,
+                                    copyUrl: __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index],
                                     index: index,
-                                    isCopied: copiedUrl === url,
+                                    isCopied: copiedUrl === __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["APPWRITE_FACE_URLS"][index],
                                     onCopy: handleCopy,
                                     isPriority: index < __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$typescript$2f$faces$2f$faces$2f$lib$2f$face$2d$urls$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PRIORITY_FACE_COUNT"]
-                                }, url, false, {
+                                }, imageUrl, false, {
                                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 165,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                            lineNumber: 156,
+                            lineNumber: 163,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                    lineNumber: 143,
+                    lineNumber: 150,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projects/typescript/faces/faces/components/face-gallery.tsx",
-                lineNumber: 137,
+                lineNumber: 144,
                 columnNumber: 7
             }, this)
         ]

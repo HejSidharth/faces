@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FACE_URLS } from "@/lib/face-urls";
+import { APPWRITE_FACE_URLS } from "@/lib/face-urls";
 import { useToast } from "@/components/ui/toast";
 
 export function LinkGenerator() {
@@ -10,8 +10,8 @@ export function LinkGenerator() {
 
   const generateLinks = () => {
     // Shuffle and pick N random URLs
-    const shuffled = [...FACE_URLS].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, Math.min(count, FACE_URLS.length));
+    const shuffled = [...APPWRITE_FACE_URLS].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, Math.min(count, APPWRITE_FACE_URLS.length));
   };
 
   const handleGenerateAndCopy = () => {
@@ -34,16 +34,16 @@ export function LinkGenerator() {
             <input
               type="number"
               min="1"
-              max={FACE_URLS.length}
+              max={APPWRITE_FACE_URLS.length}
               value={count}
               onChange={(e) => {
                 const val = parseInt(e.target.value) || 1;
-                setCount(Math.max(1, Math.min(val, FACE_URLS.length)));
+                setCount(Math.max(1, Math.min(val, APPWRITE_FACE_URLS.length)));
               }}
               className="flex-1 px-4 py-2 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
             />
             <span className="text-xs text-muted-foreground whitespace-nowrap">
-              / {FACE_URLS.length} available
+              / {APPWRITE_FACE_URLS.length} available
             </span>
           </div>
 
