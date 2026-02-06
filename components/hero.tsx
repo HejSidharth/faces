@@ -33,8 +33,7 @@ export function Hero() {
             width={80}
             height={80}
             className="rounded-full"
-            loading="eager"
-            fetchPriority="high"
+            loading="lazy"
           />
         </div>
         <div
@@ -47,8 +46,7 @@ export function Hero() {
             width={60}
             height={60}
             className="rounded-full"
-            loading="eager"
-            fetchPriority="high"
+            loading="lazy"
           />
         </div>
         <div
@@ -114,8 +112,9 @@ export function Hero() {
                 width={48}
                 height={48}
                 className="w-full h-full object-cover"
-                loading={index < 3 ? "eager" : "lazy"}
-                fetchPriority={index < 3 ? "high" : "low"}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                priority={index === 0}
               />
             </div>
           ))}

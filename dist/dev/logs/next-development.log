@@ -1,0 +1,11 @@
+[00:00:00.727] Server  LOG     ✓ Ready in 451ms
+[00:09:40.909] Server  LOG     ✓ Compiled in 76ms
+[00:10:32.210] Server  LOG     ✓ Compiled in 53ms
+[00:10:57.048] Server  LOG     ✓ Compiled in 52ms
+[00:11:04.948] Server  LOG     ✓ Compiled in 51ms
+[00:11:08.859] Server  LOG     ✓ Compiled in 66ms
+[00:12:05.333] Server  LOG     ✓ Compiled in 46ms
+[00:13:30.855] Browser WARN    Image with src "/icon-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:35.377] Browser WARN    Image with src "/icon-2.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
